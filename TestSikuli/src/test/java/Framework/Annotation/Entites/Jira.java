@@ -1,4 +1,4 @@
-package Framework;
+package Framework.Annotation.Entites;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -7,12 +7,11 @@ import java.lang.annotation.Target;
 
 
 @Retention(RetentionPolicy.RUNTIME)
-@Target(ElementType.METHOD) //can use in method only.
+@Target(ElementType.METHOD)
 public @interface Jira {
 
-    //should ignore this test?
+    //Ticket(s) JIRA : "FORMATECH-18012 ; FORMATECH-184748"
     public String Ticket() ;
-    //should ignore this test?
-    public boolean enabled() default false;
+
 
 }

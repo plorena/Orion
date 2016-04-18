@@ -1,8 +1,9 @@
 
+import Framework.Annotation.Entites.TestCheckList;
 import Framework.GUITestServiceProvider;
-import Framework.Jira;
+import Framework.Annotation.Entites.Jira;
 import Framework.TestProviderBase;
-import Framework.UserStoryInfo;
+import Framework.Annotation.Entites.UserStoryInfo;
 import org.junit.Test;
 import org.sikuli.script.FindFailed;
 import org.sikuli.script.Key;
@@ -47,10 +48,17 @@ public class Test001 extends TestProviderBase {
         }
 
     @Test
+    @Jira(Ticket="FORMATECH-2222; FORMATECH-3333")
+    @TestCheckList(Codes = "010-01",
+            Thèmes = "Version de l''aplication",
+            Scenarios = "Se connecter",
+            typeClient = TestCheckList.TypeClient.UCM,
+            prérequis = "--",
+            Chemin = "Système > CD > Version du système",
+            Résultat_attendu = "Le PDF s'ouvre et le numéro de version est celui de la version testée",
+            Exemple_dossiers = "--")
     public void testLoginLogOut0001() {
-
         Screen s = new Screen();
-
             try
             {
                 guiTest.Login();

@@ -1,5 +1,6 @@
 package Framework;
 
+import Framework.Annotation.AnnotationFactory;
 import org.sikuli.script.Key;
 import org.sikuli.script.Screen;
 import org.sikuli.script.ScreenImage;
@@ -8,8 +9,6 @@ import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import java.lang.annotation.*;
-import java.lang.reflect.Method;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;

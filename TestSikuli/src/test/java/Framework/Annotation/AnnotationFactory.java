@@ -1,4 +1,7 @@
-package Framework;
+package Framework.Annotation;
+
+import Framework.Annotation.Entites.Jira;
+import Framework.Annotation.Entites.UserStoryInfo;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;
@@ -14,13 +17,13 @@ public class AnnotationFactory
 
         Method method = classe.getMethod(nameOfTest);
 
-        // Process @Framework.Jira
+        // Process @Framework.Annotation.Entites.Jira
         if(method.isAnnotationPresent(Jira.class)) {
             Jira jira = method.getAnnotation(Jira.class);
             message = message + jira.Ticket();
         }
 
-        // Process @Framework.UserStoryInfo
+        // Process @Framework.Annotation.Entites.UserStoryInfo
         if (classe.isAnnotationPresent(UserStoryInfo.class)) {
             Annotation annotation = classe.getAnnotation(UserStoryInfo.class);
             UserStoryInfo testerInfo = (UserStoryInfo) annotation;

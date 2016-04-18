@@ -1,4 +1,4 @@
-package Framework;
+package Framework.Annotation.Entites;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
