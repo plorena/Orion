@@ -1,21 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7492255e-5af5-4025-a6dc-c8b82bc8e001" name="Default" comment="Estabilisation Framework">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestSikuli/src/test/java/AnnotationFactoryUnitTest0003.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestSikuli/src/test/java/AnnotationFactoryUnitTest0004.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestSikuli/src/test/java/AnnotationFactoryUnitTest0005.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestSikuli/src/test/java/Framework/Annotation/Entites/TestCheckList.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/test/test/Test002.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/TestSikuli/src/test/java/Framework/AnnotationFactory.java" afterPath="$PROJECT_DIR$/TestSikuli/src/test/java/Framework/Annotation/AnnotationFactory.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/TestSikuli/src/test/java/Framework/Jira.java" afterPath="$PROJECT_DIR$/TestSikuli/src/test/java/Framework/Annotation/Entites/Jira.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/TestSikuli/src/test/java/Framework/UserStoryInfo.java" afterPath="$PROJECT_DIR$/TestSikuli/src/test/java/Framework/Annotation/Entites/UserStoryInfo.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/TestSikuli/src/test/java/Test002.java" afterPath="$PROJECT_DIR$/TestSikuli/src/test/java/GUITestServiceProviderUnitTest0001.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/test/Framework/GUITestServiceProvider.class" afterPath="$PROJECT_DIR$/out/test/test/Framework/GUITestServiceProvider.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/test/Test001.class" afterPath="$PROJECT_DIR$/out/test/test/Test001.class" />
+    <list default="true" id="7492255e-5af5-4025-a6dc-c8b82bc8e001" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/test/test/Framework/Jira.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/test/test/Framework/UserStoryInfo$Priority.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/test/test/Framework/UserStoryInfo.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestSikuli/src/test/java/Framework/GUITestServiceProvider.java" afterPath="$PROJECT_DIR$/TestSikuli/src/test/java/Framework/GUITestServiceProvider.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestSikuli/src/test/java/Test001.java" afterPath="$PROJECT_DIR$/TestSikuli/src/test/java/Test001.java" />
     </list>
     <ignored path="Orion.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -140,8 +130,8 @@
       <file leaf-file-name="Test001.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TestSikuli/src/test/java/Test001.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.048257373">
-              <caret line="48" column="4" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="4" />
+            <state vertical-scroll-proportion="0.40214476">
+              <caret line="60" column="32" selection-start-line="60" selection-start-column="32" selection-end-line="60" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -782,7 +772,13 @@
       <option name="project" value="LOCAL" />
       <updated>1461008374109</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Estabilisation Framework">
+      <created>1461012009336</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1461012009336</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -982,8 +978,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TestSikuli/src/test/java/Test001.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.048257373">
-          <caret line="48" column="4" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="4" />
+        <state vertical-scroll-proportion="0.40214476">
+          <caret line="60" column="32" selection-start-line="60" selection-start-column="32" selection-end-line="60" selection-end-column="32" />
           <folding />
         </state>
       </provider>
