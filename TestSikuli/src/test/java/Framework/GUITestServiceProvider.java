@@ -1,3 +1,5 @@
+package Framework;
+
 import org.sikuli.script.Key;
 import org.sikuli.script.Screen;
 import org.sikuli.script.ScreenImage;
@@ -173,35 +175,14 @@ public class GUITestServiceProvider {
             e1.printStackTrace();
         }
         try {
-            org.junit.Assert.fail( e.getMessage() + ". Voici le screenshot : " + stringFile + " **MetaInfo**" + getInfo(nameofTest, clase));
+            AnnotationFactory annotationFactory = new AnnotationFactory();
+            String getMetaInfo = annotationFactory.getInfo(clase, nameofTest);
+            org.junit.Assert.fail( e.getMessage() + ". Voici le screenshot : " + stringFile + " ****MetaInfo****" + getMetaInfo);
         }
         catch(java.lang.Exception exx){}
 
     }
 
-    public String getInfo(String nameofTest, Class<?> classe) throws java.lang.Exception {
-
-        String message = "";
-
-        Method method = classe.getMethod(nameofTest);
-
-        // Process @Jira
-        if(method.isAnnotationPresent(Jira.class)) {
-            Jira jira = method.getAnnotation(Jira.class);
-            message = message + jira.Ticket();
-        }
-
-        // Process @UserStoryInfo
-        if (classe.isAnnotationPresent(UserStoryInfo.class)) {
-            Annotation annotation = classe.getAnnotation(UserStoryInfo.class);
-            UserStoryInfo testerInfo = (UserStoryInfo) annotation;
-            message = message + " Priority : " + testerInfo.priority();
-            message = message + " CreatedBy : " + testerInfo.sprint();
-        }
-
-
-        return message;
-    }
 
 
     public void CaptureScreenException(Screen s, Exception e) {

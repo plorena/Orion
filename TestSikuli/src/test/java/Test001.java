@@ -1,17 +1,21 @@
 
+import Framework.GUITestServiceProvider;
+import Framework.Jira;
+import Framework.TestProviderBase;
+import Framework.UserStoryInfo;
 import org.junit.Test;
 import org.sikuli.script.FindFailed;
 import org.sikuli.script.Key;
 import org.sikuli.script.Screen;
 
 @UserStoryInfo(sprint = "87", priority = UserStoryInfo.Priority.HIGH)
-public class TwooTest extends TOTO {
+public class Test001 extends TestProviderBase {
 
 
     GUITestServiceProvider guiTest;
     Screen s;
 
-    public TwooTest()
+    public Test001()
     {
          s = new Screen();
          guiTest = new GUITestServiceProvider(s, "C:\\root\\TestSikuli\\src\\test\\US001", "C:\\Failed\\");
