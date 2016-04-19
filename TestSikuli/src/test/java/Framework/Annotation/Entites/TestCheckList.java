@@ -19,10 +19,10 @@ public @interface TestCheckList {
     public String Scenarios();
     // Test ciblé pour le
     public TypeClient typeClient ();
-    public String prérequis();
-    public String Chemin();
-    public String Résultat_attendu();
-    public String Exemple_dossiers();
+    public String prérequis()  default "N/A";
+    public String Chemin()  default "N/A";
+    public String Résultat_attendu()  default "N/A";
+    public String Exemple_dossiers()  default "N/A";
 
     public enum TypeClient {
         UCM, AUTRESCLIENTS

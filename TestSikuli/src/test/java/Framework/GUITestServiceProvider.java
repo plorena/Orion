@@ -1,6 +1,5 @@
 package Framework;
 
-import Framework.Annotation.AnnotationFactory;
 import org.sikuli.script.Key;
 import org.sikuli.script.Screen;
 import org.sikuli.script.ScreenImage;
@@ -62,6 +61,7 @@ public class GUITestServiceProvider {
 
 
     public void Logout() throws org.sikuli.script.FindFailed, InterruptedException {
+
         s.click(img("logout"));
         s.wait(5.0);
         clicker("logout");
@@ -154,7 +154,7 @@ public class GUITestServiceProvider {
 
 
 
-    public void CaptureScreenException(Screen s, Class<?> clase , String nameofTest,  Exception e)  {
+    public void CaptureScreenException(Screen s, String metaTestData, Exception e)  {
 
 
         ScreenImage file = s.capture(s.getBounds());
@@ -174,16 +174,11 @@ public class GUITestServiceProvider {
             e1.printStackTrace();
         }
         try {
-            AnnotationFactory annotationFactory = new AnnotationFactory();
-            String getMetaInfo = annotationFactory.getInfo(clase, nameofTest);
-            org.junit.Assert.fail( e.getMessage() + ". Voici le screenshot : " + stringFile + " ****MetaInfo****" + getMetaInfo);
+            org.junit.Assert.fail( e.getMessage() + ". Voici le screenshot : " + stringFile + " ****MetaInfo****" + metaTestData);
         }
         catch(java.lang.Exception exx){}
 
     }
 
 
-
-    public void CaptureScreenException(Screen s, Exception e) {
-    }
 }
