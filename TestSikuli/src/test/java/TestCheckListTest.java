@@ -170,6 +170,7 @@ public class TestCheckListTest extends TestProviderBase {
             s.click(gui.img("item_travailleurs_signalitique"));
             s.click(gui.img("sousfleche_travailleurs_signalitique"));
 
+
             gui.Logout();
 
 
