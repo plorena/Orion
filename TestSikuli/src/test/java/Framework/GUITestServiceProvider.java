@@ -166,15 +166,16 @@ public class GUITestServiceProvider {
         DateFormat dateFormat = new SimpleDateFormat("ddMMyyyy_HHmmss");
         Date date = new Date();
         String dateTimeval = dateFormat.format(date);
+        String strPath = pathIMGSFailed + dateTimeval + ".png";
 
-        File file1 = new File(pathIMGSFailed + dateTimeval + ".png");
+        File file1 = new File(strPath);
         try {
             ImageIO.write(bf, "png", file1);
         } catch (IOException e1) {
             e1.printStackTrace();
         }
         try {
-            org.junit.Assert.fail( e.getMessage() + ". Voici le screenshot : " + stringFile + " ****MetaInfo****" + metaTestData);
+            org.junit.Assert.fail( e.getMessage() + ". Voici le screenshot : " + strPath + " ****MetaInfo****" + metaTestData);
         }
         catch(java.lang.Exception exx){}
 

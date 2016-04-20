@@ -22,6 +22,106 @@ public class TestCheckListTest extends TestProviderBase {
     }
 
 
+    @Test
+    @Jira(Ticket = "FORMATECH-12356 FORMATECH-465431")
+    public void testSocietes_049() {
+
+        Screen s = new Screen();
+
+        try
+        {
+            gui.Login();
+
+            //gui.clicker(gui.img("nouveau_societe"));
+            //
+            gui.clicker("item_societes");
+
+            s.rightClick(gui.img("item_societes"));
+            s.wait(gui.img("submenu_societes"));
+            s.click(gui.img("nouveau_societe"));
+            gui.AttendrePourImage("creation_societe");
+
+
+            gui.encoderNumero("13042016");
+
+
+            s.click(gui.img("code_employeur"));
+            gui.encoderNumero(1);
+
+
+            s.click(gui.img("button_suivant"));
+            s.wait(gui.img("return_code_999"));
+            s.click(gui.img("button_ok"));
+
+
+            s.click(gui.img("code_employeur"));
+            gui.encoderNumero(99563);
+
+            s.click(gui.img("button_suivant"));
+
+            s.wait(gui.img("creation_employeur_criteres"));
+            s.click(gui.img("button_chercher"));
+
+            s.wait(gui.img("resultat_recherche"));
+            gui.clicker("0176_AGH");
+            s.click(gui.img("check_0176"));
+            s.click(gui.img("button_suivant"));
+            s.click(gui.img("button_suivant"));
+            s.click(gui.img("button_suivant"));
+
+            s.type("PoC Paul Lorena");
+            s.click(gui.img("button_suivant"));
+            s.click(gui.img("button_suivant"));
+
+
+            gui.encoderNumero("003");
+            gui.clicker("003_societe");
+
+            s.click(gui.img("button_suivant"));
+            s.click(gui.img("button_suivant"));
+
+            s.type("Sint Gommarusstraat");
+            s.type(Key.TAB);
+            s.type(Key.TAB);
+            gui.encoderNumero(66);
+            s.type(Key.TAB);
+            gui.encoderNumero(66);
+            s.type(Key.TAB);
+            s.type(Key.TAB);
+
+            gui.encoderNumero(2800);
+
+            s.type(Key.ENTER);
+            s.click(gui.img("button_ok"));
+
+            s.click(gui.img("button_suivant"));
+            s.click(gui.img("button_suivant"));
+            s.click(gui.img("button_suivant"));
+
+
+            gui.encoderNumero(2);
+            s.click(gui.img("button_suivant"));
+            gui.encoderNumero("13042016");
+
+
+            s.click(gui.img("button_suivant"));
+            s.click(gui.img("button_suivant"));
+            s.click(gui.img("button_suivant"));
+            s.click(gui.img("button_suivant"));
+            s.click(gui.img("button_suivant"));
+
+            s.click(gui.img("button_ok"));
+            s.click(gui.img("button_annuler"));
+
+            gui.Logout();
+
+        }
+        catch(Exception e)
+        {
+            super.HandleException(screen, gui, e);
+        }
+    }
+
 
     @Test
     @TestCheckList(Codes = "000",
@@ -188,103 +288,7 @@ public class TestCheckListTest extends TestProviderBase {
 
 
 
-    @Test
-    @Jira(Ticket = "FORMATECH-15463")
-    public void testSocietes_049() {
 
-        Screen s = new Screen();
-
-        try
-        {
-            gui.Login();
-
-            gui.clicker("item_societes");
-
-            s.rightClick(gui.img("item_societes"));
-            s.wait(gui.img("submenu_societes"));
-            s.click(gui.img("nouveau_societe"));
-            gui.AttendrePourImage("creation_societe");
-
-
-            gui.encoderNumero("13042016");
-
-
-            s.click(gui.img("code_employeur"));
-            gui.encoderNumero(1);
-
-
-            s.click(gui.img("button_suivant"));
-            s.wait(gui.img("return_code_999"));
-            s.click(gui.img("button_ok"));
-
-
-            s.click(gui.img("code_employeur"));
-            gui.encoderNumero(99563);
-
-            s.click(gui.img("button_suivant"));
-
-            s.wait(gui.img("creation_employeur_criteres"));
-            s.click(gui.img("button_chercher"));
-
-            s.wait(gui.img("resultat_recherche"));
-            gui.clicker("0176_AGH");
-            s.click(gui.img("check_0176"));
-            s.click(gui.img("button_suivant"));
-            s.click(gui.img("button_suivant"));
-            s.click(gui.img("button_suivant"));
-
-            s.type("PoC Paul Lorena");
-            s.click(gui.img("button_suivant"));
-            s.click(gui.img("button_suivant"));
-
-
-            gui.encoderNumero("003");
-            gui.clicker("003_societe");
-
-            s.click(gui.img("button_suivant"));
-            s.click(gui.img("button_suivant"));
-
-            s.type("Sint Gommarusstraat");
-            s.type(Key.TAB);
-            s.type(Key.TAB);
-            gui.encoderNumero(66);
-            s.type(Key.TAB);
-            gui.encoderNumero(66);
-            s.type(Key.TAB);
-            s.type(Key.TAB);
-
-            gui.encoderNumero(2800);
-
-            s.type(Key.ENTER);
-            s.click(gui.img("button_ok"));
-
-            s.click(gui.img("button_suivant"));
-            s.click(gui.img("button_suivant"));
-            s.click(gui.img("button_suivant"));
-
-
-            gui.encoderNumero(2);
-            s.click(gui.img("button_suivant"));
-            gui.encoderNumero("13042016");
-
-
-            s.click(gui.img("button_suivant"));
-            s.click(gui.img("button_suivant"));
-            s.click(gui.img("button_suivant"));
-            s.click(gui.img("button_suivant"));
-            s.click(gui.img("button_suivant"));
-
-            s.click(gui.img("button_ok"));
-            s.click(gui.img("button_annuler"));
-
-            gui.Logout();
-
-        }
-        catch(Exception e)
-        {
-            super.HandleException(screen, gui, e);
-        }
-    }
 
 
 }

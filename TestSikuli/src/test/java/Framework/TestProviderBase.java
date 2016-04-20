@@ -3,6 +3,7 @@ package Framework;
 import Framework.Annotation.Entites.Jira;
 import Framework.Annotation.Entites.TestCheckList;
 import Framework.Annotation.Entites.UserStoryInfo;
+import org.sikuli.script.FindFailed;
 import org.sikuli.script.Screen;
 
 import java.lang.annotation.Annotation;
@@ -36,7 +37,7 @@ public class TestProviderBase {
         // Process @Framework.Annotation.Entites.Jira
         if(method.isAnnotationPresent(Jira.class)) {
             Jira jira = method.getAnnotation(Jira.class);
-            message = message + jira.Ticket();
+            message = message + " Ticket(s) Jira : " + jira.Ticket();
         }
 
         // Process @TestCheckList
