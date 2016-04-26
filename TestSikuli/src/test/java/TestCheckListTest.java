@@ -33,7 +33,6 @@ public class TestCheckListTest extends TestProviderBase {
             gui.Login();
 
             //gui.clicker(gui.img("nouveau_societe"));
-            //
             gui.clicker("item_societes");
 
             s.rightClick(gui.img("item_societes"));
